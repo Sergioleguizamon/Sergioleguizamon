@@ -53,6 +53,24 @@ nav{
     text-decoration: none;
 }
 
-body{
-    background-image: url(OIP.jpg);
+nav h1 h2 p {
+    border-style: solid;
+    color: black;
+}
+
+p{
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(Shadow.png);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
 }
