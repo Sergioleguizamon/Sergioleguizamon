@@ -77,4 +77,5 @@ body {
 
 div{
     background-image: url(cid.jpg);
+    border-style: solid;
 }
