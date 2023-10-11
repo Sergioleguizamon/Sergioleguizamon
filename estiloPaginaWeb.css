@@ -74,3 +74,11 @@ body {
     background-position: center;
     font-family: sans-serif;
 }
+
+body:scrollbar{
+    width: 15px;
+}
+
+body:scrollbar-thumb{
+    background-color: red;
+}
