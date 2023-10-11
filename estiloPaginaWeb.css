@@ -75,10 +75,6 @@ body {
     font-family: sans-serif;
 }
 
-body:scrollbar{
-    width: 15px;
-}
-
-body:scrollbar-thumb{
-    background-color: red;
+body nav{
+    background-image: url(cid.jpg);
 }
