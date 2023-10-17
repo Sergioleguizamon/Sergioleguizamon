@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing:  border-box;
-    font-family: 'Open Sans';
+    font-family: sans-serif;
 }
 
 nav{
@@ -72,11 +72,11 @@ body {
     background-image: url(Shadow.png);
     background-size: cover;
     background-position: center;
-    font-family: sans-serif;
 }
 
-div {
-   border-style: solid; 
-   margin: 15px;
-   padding: 20px;
+nav ul li p {
+  border-style: solid;
+  color: black;
 }
+
+
