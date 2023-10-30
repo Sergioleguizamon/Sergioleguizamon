@@ -69,7 +69,7 @@ h1 {
 body {
     margin: 0px;
     padding: 0px;
-    background-image: url(Shadow.png);
+    background-image: url(shadow.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -79,4 +79,36 @@ nav ul li p {
   color: black;
 }
 
+form{
+ width: 300px;
+ border: 5px inset black;
+ color: white;
+ background-color: navy;
+ padding: 10px;
+}
+
+.block {
+ display: block;
+}
+.p1 {
+ margin-top: 5px;
+}
+.p2 {
+ margin-top: 10px;
+}
+.p3 {
+ margin-top: 15px;
+}
+.error {
+ border: 2px dashed red;
+}
+
+div {
+    border-style: solid;
+    padding: 15px 20px; 
+}
+
+img .jonhsmith{
+    padding: 100px;
+}
 
