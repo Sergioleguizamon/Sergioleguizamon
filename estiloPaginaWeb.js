@@ -9,11 +9,17 @@
    let email = f_Email.value.trim();
    let f_Password = document.getElementById("f_Password");
    let password = f_Password.value.trim();
+   let f_icr = document.getElementById("f_icr");
+   let icr = f_icr.checked;
    let error = [];
    let erroresDeCampos = null;
 
    let formulario = document.getElementById("formulario");
-
+   
+   for(v of formulario.querySelectorAll("input,select,div")) {
+   	v.claasList.remove("error")
+   }
+   
    if(nombre == ""){
      error.push("no pude estar sin nombre");
      erroresDeCampos = f_Nombre;
@@ -31,6 +37,11 @@
    	erroresDeCampos = f_Password;
    	f_Password.classList.add("error");                                              
    }
+ if(!icr) {
+  error.push("Debe aceptar los términos y condiciones");
+  erroresDeCampos = f_icr;
+  f_icr.parentNode.classList.add("error");
+  }
    ltaDeErrores.innerHTML="";
     if(error.length > 0){
      for (let i = 0; i<error.length;i++) {
@@ -43,11 +54,12 @@
    }
    return false;
     }
-      let mje = `ya ingreso ${nombre}  email ${email} password ${password}`;
+      let mje = `ya ingreso nombre ${nombre}  email ${email} password ${password}`;
   bienvenido.innerHTML = mje;
-  return false
+  return false;
  }
  
+
 
   
   

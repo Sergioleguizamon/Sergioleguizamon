@@ -1,7 +1,8 @@
 <html>
 <head>
   <link rel="stylesheet"  href="estiloPaginaWeb.css">
-  <script src="estiloPaginaWeb.js"> </script>
+  <link rel="stylesheet"  href="estiloPaginaWeb.js">
+  <link rel="stylesheet"  href="estiloPaginaWeb2.js">
    <title>The Eminence In Shadow|Fandom</title>
 </head>
 <body>
@@ -34,11 +35,15 @@
   <div>
    <form  onsubmit="return validar()" id="formulario">
      <label class="block p1" for="f_Nombre">Nombre</label>
-     <input class="block" id="f_Nombre" name="f_Nombre" />
+     <input class="block" id="f_Nombre" name="f_Nombre" id="ltaDeErrores" />
      <label class="block p1" for="f_Email">Email</label>
-     <input class="block" id="f_Email" name="f_Email">
+     <input class="block" id="f_Email" name="f_Email" id="ltaDeErrores">
      <label class="block p1" for="f_Password">Password</label>
-      <input class="block" id="f_Password" name="f_Password">
+      <input class="block" id="f_Password" name="f_Password" id="ltaDeErrores">
+       <label class="d-block p1" for="f_icr">Bienvenido usario</label>
+ <div>
+  <input class="d-block" id="f_icr" name="f_icr" type="checkbox" />
+ </div>
       <button class="block p3" type="submit" id="Login">
         Login
       </button>
