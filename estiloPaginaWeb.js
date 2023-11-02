@@ -1,66 +1,62 @@
-  const bienvenido = document.getElementById("bienvenido");
  const Login = document.getElementById("Login");
- const ltaDeErrores = document.getElementById("ltaDeErrores");
+ const lista = document.getElementById("lista");
 
- function validar(){
+ function car(){
    let f_Nombre = document.getElementById("f_Nombre");
-   let nombre = f_Nombre.value.trim();   
+   let Nombre = f_Nombre.value.trim();   
    let f_Email = document.getElementById("f_Email");
-   let email = f_Email.value.trim();
+   let Email = f_Email.value.trim();
    let f_Password = document.getElementById("f_Password");
-   let password = f_Password.value.trim();
+   let Password = f_Password.value.trim();
    let f_icr = document.getElementById("f_icr");
    let icr = f_icr.checked;
    let error = [];
    let erroresDeCampos = null;
 
-   let formulario = document.getElementById("formulario");
+   let  lleno = document.getElementById("lleno");
    
-   for(v of formulario.querySelectorAll("input,select,div")) {
-   	v.claasList.remove("error")
+   for(v of lleno.querySelectorAll("input,select,div")) {
+    v.classList.remove("error");
    }
    
-   if(nombre == ""){
-     error.push("no pude estar sin nombre");
+   if(Nombre == ""){
+     error.push("no pude estar sin Nombre");
      erroresDeCampos = f_Nombre;
      f_Nombre.classList.add("error");
    }
 
-   if(email == ""){
-     error.push("no debe estar sin email");
+   if(Email == ""){
+     error.push("no debe estar sin Email");
      erroresDeCampos = f_Email;
      f_Email.classList.add("error");
    }
 
-   if(password == ""){
-   	error.push("no pude estar sin password");
-   	erroresDeCampos = f_Password;
-   	f_Password.classList.add("error");                                              
+   if(Password == ""){
+    error.push("no pude estar sin Password");
+    erroresDeCampos = f_Password;
+    f_Password.classList.add("error");                                              
    }
- if(!icr) {
-  error.push("Debe aceptar los términos y condiciones");
-  erroresDeCampos = f_icr;
-  f_icr.parentNode.classList.add("error");
+if(!icr){
+     error.push("debe llenar este formulario si o si");
+     erroresDeCampos = f_icr;
+     f_icr.parentNode.classList.add("error");
   }
-   ltaDeErrores.innerHTML="";
+   lista.innerHTML="";
     if(error.length > 0){
      for (let i = 0; i<error.length;i++) {
-   	let li = document.createElement("li");
-   	li.innerHTML = error[i];
-   	ltaDeErrores.appendChild(li);
+    let li = document.createElement(li);
+    li.innerHTML = error[i];
+    erroresDeCampos.appendChild(li);
    }
+ }
    if(erroresDeCampos!=null){
     erroresDeCampos.focus();
+     return false;
    }
-   return false;
-    }
-      let mje = `ya ingreso nombre ${nombre}  email ${email} password ${password}`;
-  bienvenido.innerHTML = mje;
+  let mje = `ya ingreso Nombre ${Nombre}  Email ${Email} Password ${Password}`;
+  let resultado = document.getElementById("resultado");
+  let p = document.createElement("p")
+  p.innerHTML = mje;
+  resultado.appendChild(p);
   return false;
  }
- 
-
-
-  
-  
- 

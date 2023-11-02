@@ -33,13 +33,13 @@
        </nav>
   </ul>
   <div>
-   <form  onsubmit="return validar()" id="formulario">
+    <form  onsubmit="return car()" id="lleno">
      <label class="block p1" for="f_Nombre">Nombre</label>
-     <input class="block" id="f_Nombre" name="f_Nombre" id="ltaDeErrores" />
+     <input class="block" id="f_Nombre" name="f_Nombre" />
      <label class="block p1" for="f_Email">Email</label>
-     <input class="block" id="f_Email" name="f_Email" id="ltaDeErrores">
+     <input class="block" id="f_Email" name="f_Email" />
      <label class="block p1" for="f_Password">Password</label>
-      <input class="block" id="f_Password" name="f_Password" id="ltaDeErrores">
+      <input class="block" id="f_Password" name="f_Password" >
        <label class="d-block p1" for="f_icr">Bienvenido usario</label>
  <div>
   <input class="d-block" id="f_icr" name="f_icr" type="checkbox" />
@@ -47,12 +47,9 @@
       <button class="block p3" type="submit" id="Login">
         Login
       </button>
-   </form> 
-   </div> 
-  <p id="bienvenido"></p>
-
-   <ul id="ltaDeErrores"> 
-   </ul>
+        <ul id="lista"></ul>
+   </form>
+   <div id="resultado"></div>  
   <nav>
   <h1>Bienvenidos a La Eminencia En Las Sombras</h1>
   <p>
