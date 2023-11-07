@@ -40,23 +40,23 @@
             </p>
             <li><a href="">apariencia</a></li>      
     <div id="carrusel">
-    <img src="cid.jpg"  src="MasterShadow.jpg" src="jonh smith.png">
+    <img src="cid.jpg" src="MasterShadow.jpg"  src="jonh smith.png">
     <button class="prev">Anterior</button>
     <button class="next">Siguiente</button>
 </div>
 <script>
  let indice = 0;
 
- const imagenes = ['./img/cid.jpg','./img/MasterShadow.jpg','./img/jonh smith.png'];
+ const imagenes = ['.cid.jpg','.MasterShadow.jpg','.jonh smith.png'];
 
  const fondo = document.querySelector("#carrusel");
 
- const prev = document.querySelector(".prev");
+ const Anterior = document.querySelector(".Anterior");
 
- const next = document.querySelector(".next");
+ const Siguiente = document.querySelector(".Siguiente");
 
- prev.addEventListener("click", () => {
-     if(indice === 0){
+ Anterior.addEventListener("click", () => {
+     if(indice == 0){
         indice = imagenes.length-1;
      } else {
         indice--;
@@ -68,8 +68,8 @@
      fondo.style.backgroundSize = "cover";
  });
 
- next.addEventListener("click", () => {
-   if(indice === imagenActual.length-1){
+ Siguiente.addEventListener("click", () => {
+   if(indice == imagenActual.length-1){
      indice = 0;
    } else {
     indice++;
