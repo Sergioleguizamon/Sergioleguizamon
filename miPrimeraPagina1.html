@@ -38,14 +38,49 @@
               es el antiheroe del anime y principal protagonista
               del anime the eminence of shadow y lider Shadow Garden
             </p>
-            <li><a href="">apariencia</a></li>
-             <div class="carousel">
-    <div class="prev">Anterior</div>
-    <div class="images">
-        <img src="cid.jpg">
-    </div>
-    <div class="next">Siguiente</div>
-    </div>
+            <li><a href="">apariencia</a></li>      
+    <div id="carrusel">
+    <img src="cid.jpg"  src="MasterShadow.jpg" src="jonh smith.png">
+    <button class="prev">Anterior</button>
+    <button class="next">Siguiente</button>
+</div>
+<script>
+ let indice = 0;
+
+ const imagenes = ['./img/cid.jpg','./img/MasterShadow.jpg','./img/jonh smith.png'];
+
+ const fondo = document.querySelector("#carrusel");
+
+ const prev = document.querySelector(".prev");
+
+ const next = document.querySelector(".next");
+
+ prev.addEventListener("click", () => {
+     if(indice === 0){
+        indice = imagenes.length-1;
+     } else {
+        indice--;
+     }
+
+     let imagenActual = imagenes[indice];
+
+     fondo.style.backgroundimage = "url(" + imagenActual + ")";
+     fondo.style.backgroundSize = "cover";
+ });
+
+ next.addEventListener("click", () => {
+   if(indice === imagenActual.length-1){
+     indice = 0;
+   } else {
+    indice++;
+   }
+
+   let imagenActual = imagenes[indice];
+
+   fondo.style.backgroundimage = "url(" + imagenActual + ")";
+     fondo.style.backgroundSize = "cover";
+ });
+</script>
             <p>
               cid es un joven delgado pero con complexion musculosa, cabello negro y oscuro, ojos negros y rasgos faciales a
               menudo descritos como generico y fragil, los ojos se le ponen rojos cuando hace su Overdride 
